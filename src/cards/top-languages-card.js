@@ -274,6 +274,8 @@ const renderTopLanguages = (topLangs, options = {}) => {
     finalLayout = renderNormalLayout(langs, width, totalLanguageSize);
   }
 
+  height = 195; // NOTE: Manually set
+
   // returns theme based colors with proper overrides and defaults
   const colors = getCardColors({
     title_color,
