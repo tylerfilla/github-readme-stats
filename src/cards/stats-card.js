@@ -177,9 +177,9 @@ const renderStatsCard = (stats = {}, options = { hide: [] }) => {
 
   // Conditionally rendered elements
   const rankCircle = hide_rank
-    ? ""
+    ? "" // NOTE: 400 changed to 320 below
     : `<g data-testid="rank-circle" 
-          transform="translate(400, ${height / 2 - 50})">
+          transform="translate(320, ${height / 2 - 50})">
         <circle class="rank-circle-rim" cx="-10" cy="8" r="40" />
         <circle class="rank-circle" cx="-10" cy="8" r="40" />
         <g class="rank-text">
@@ -216,7 +216,7 @@ const renderStatsCard = (stats = {}, options = { hide: [] }) => {
         270 /* min */,
         Infinity,
       )
-    : 495;
+    : 415; // NOTE: Modified
 
   const card = new Card({
     customTitle: custom_title,
