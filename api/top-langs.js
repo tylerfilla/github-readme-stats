@@ -33,6 +33,10 @@ module.exports = async (req, res) => {
   } = req.query;
   res.setHeader("Content-Type", "image/svg+xml");
 
+  if (username !== "tylerfilla") {
+    return res.send(renderError("Something went wrong"));
+  }
+
   if (blacklist.includes(username)) {
     return res.send(renderError("Something went wrong"));
   }
