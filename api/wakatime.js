@@ -36,6 +36,10 @@ module.exports = async (req, res) => {
 
   res.setHeader("Content-Type", "image/svg+xml");
 
+  if (username !== "tylerfilla") {
+    return res.send(renderError("Something went wrong"));
+  }
+
   if (locale && !isLocaleAvailable(locale)) {
     return res.send(renderError("Something went wrong", "Language not found"));
   }
